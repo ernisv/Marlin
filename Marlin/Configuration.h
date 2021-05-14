@@ -582,9 +582,9 @@
     #define DEFAULT_Kd_LIST {  78.81,  78.81 }
   #else
     // Ender 3 v2
-    #define DEFAULT_Kp 18.47
-    #define DEFAULT_Ki 1.04
-    #define DEFAULT_Kd 81.78
+    #define DEFAULT_Kp 15.48
+    #define DEFAULT_Ki 1.16
+    #define DEFAULT_Kd 51.50
 //    #define DEFAULT_Kp  28.72
 //    #define DEFAULT_Ki   2.62
 //    #define DEFAULT_Kd  78.81
@@ -1151,7 +1151,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -45, -20, -3.85 }
+#define NOZZLE_TO_PROBE_OFFSET { -45, -20, -3.67 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
