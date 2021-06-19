@@ -37,7 +37,7 @@
  *
  * Advanced settings can be found in Configuration_adv.h
  */
-#define CONFIGURATION_H_VERSION 020007
+#define CONFIGURATION_H_VERSION 02000900
 
 //===========================================================================
 //============================= Getting Started =============================
@@ -125,7 +125,7 @@
  * Currently Ethernet (-2) is only supported on Teensy 4.1 boards.
  * :[-2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT_2 3
+//#define SERIAL_PORT_2 -1
 //#define BAUDRATE_2 250000   // Enable to override BAUDRATE
 
 /**
@@ -2570,9 +2570,10 @@
 //=============================== Graphical TFTs ==============================
 //=============================================================================
 
-//
+/**
  * Specific TFT Model Presets. Enable one of the following options
  * or enable TFT_GENERIC and set sub-options.
+*/
 
 //
 // 480x320, 3.5", SPI Display From MKS
