@@ -1664,7 +1664,11 @@ void Temperature::mintemp_error(const heater_id_t heater_id) {
     #endif
 
     #if ENABLED(THERMAL_PROTECTION_CHAMBER)
+<<<<<<< HEAD
       if (degChamber() > (CHAMBER_MAXTEMP)) maxtemp_error(H_CHAMBER);
+=======
+      if (degChamber() > CHAMBER_MAXTEMP) maxtemp_error(H_CHAMBER);
+>>>>>>> 3e7f69b7c8 (🎨 Rename *_temp_error to *temp_error)
     #endif
 
     #if WATCH_CHAMBER

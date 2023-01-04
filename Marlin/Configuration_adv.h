@@ -469,10 +469,17 @@
  * Thermistors able to support high temperature tend to have a hard time getting
  * good readings at room and lower temperatures. This means TEMP_SENSOR_X_RAW_LO_TEMP
  * will probably be caught when the heating element first turns on during the
+<<<<<<< HEAD
  * preheating process, which will trigger a MINTEMP error as a safety measure
  * and force stop everything.
  * To circumvent this limitation, we allow for a preheat time (during which,
  * MINTEMP error won't be triggered) and add a min_temp buffer to handle
+=======
+ * preheating process, which will trigger a mintemp_error as a safety measure
+ * and force stop everything.
+ * To circumvent this limitation, we allow for a preheat time (during which,
+ * mintemp_error won't be triggered) and add a min_temp buffer to handle
+>>>>>>> 3e7f69b7c8 (🎨 Rename *_temp_error to *temp_error)
  * aberrant readings.
  *
  * If you want to enable this feature for your hotend thermistor(s)
@@ -480,7 +487,11 @@
  */
 
 // The number of consecutive low temperature errors that can occur
+<<<<<<< HEAD
 // before a MINTEMP error is triggered. (Shouldn't be more than 10.)
+=======
+// before a mintemp_error is triggered. (Shouldn't be more than 10.)
+>>>>>>> 3e7f69b7c8 (🎨 Rename *_temp_error to *temp_error)
 //#define MAX_CONSECUTIVE_LOW_TEMPERATURE_ERROR_ALLOWED 0
 
 /**
