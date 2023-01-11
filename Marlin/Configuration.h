@@ -658,15 +658,15 @@
 
 #if ENABLED(PIDTEMP)
   //#define PID_DEBUG             // Print PID debug data to the serial port. Use 'M303 D' to toggle activation.
-  //#define PID_PARAMS_PER_HOTEND // Use separate PID parameters for each extruder (useful for mismatched extruders)
+  #define PID_PARAMS_PER_HOTEND // Use separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with G-code: M301 E[extruder number, 0-2]
 
   #if ENABLED(PID_PARAMS_PER_HOTEND)
     // Specify up to one value per hotend here, according to your setup.
     // If there are fewer values, the last one applies to the remaining hotends.
-    #define DEFAULT_Kp_LIST {  22.20,  22.20 }
-    #define DEFAULT_Ki_LIST {   1.08,   1.08 }
-    #define DEFAULT_Kd_LIST { 114.00, 114.00 }
+    #define DEFAULT_Kp_LIST {  27.13,  14.25 }
+    #define DEFAULT_Ki_LIST {   1.80,   0.69 }
+    #define DEFAULT_Kd_LIST { 102.49, 73.28 }
   #else
     #define DEFAULT_Kp  34.00
     #define DEFAULT_Ki   2.12
@@ -812,7 +812,7 @@
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of flash)
-  //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
+  #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of flash)
 #endif
 
 // @section safety
@@ -895,7 +895,7 @@
   #define DEFAULT_SEGMENTS_PER_SECOND 200
 
   // After homing move down to a height where XY movement is unconstrained
-  //#define DELTA_HOME_TO_SAFE_ZONE
+  #define DELTA_HOME_TO_SAFE_ZONE
 
   // Delta calibration menu
   // Add three-point calibration to the MarlinUI menu.
@@ -925,21 +925,21 @@
   #define DELTA_DIAGONAL_ROD 231.0        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 150.00             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 284.76             // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { 0.0, -0.97, -0.53 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 111.0              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 114.38              // (mm) Get this value from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { -0.35, 0.4, -0.05 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
-  //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
-  //#define DELTA_DIAGONAL_ROD_TRIM_TOWER { 0.0, 0.0, 0.0 }
+  #define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
+//  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { 0.0, 0.0, 0.0 }
 #endif
 
 // @section scara
@@ -1169,7 +1169,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 50, 50 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 160, 47.6, 47.6 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -1484,11 +1484,11 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, 25, -7 }
+#define NOZZLE_TO_PROBE_OFFSET { 0, 25, -9.5 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 30
+#define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
@@ -1654,8 +1654,8 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
-#define INVERT_E1_DIR false
+#define INVERT_E0_DIR false
+#define INVERT_E1_DIR true
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
 #define INVERT_E4_DIR false
@@ -1756,7 +1756,7 @@
 #endif
 
 #if EITHER(MIN_SOFTWARE_ENDSTOPS, MAX_SOFTWARE_ENDSTOPS)
-  //#define SOFT_ENDSTOPS_MENU_ITEM  // Enable/Disable software endstops from the LCD
+  #define SOFT_ENDSTOPS_MENU_ITEM  // Enable/Disable software endstops from the LCD
 #endif
 
 /**
