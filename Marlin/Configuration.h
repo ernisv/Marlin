@@ -925,17 +925,17 @@
   #define DELTA_DIAGONAL_ROD 231.0        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 284.76             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 284.5             // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { 0.0, -0.97, -0.53 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { -0.22, -1.91, 0.0 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 114.38              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 114.54              // (mm) Get this value from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { -0.35, 0.4, -0.05 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { -0.1, -0.17, 0.28 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
   #define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -1484,7 +1484,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 0, 25, -9.6 }
+#define NOZZLE_TO_PROBE_OFFSET { -25, 0, -9.9 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1494,7 +1494,7 @@
 #define XY_PROBE_FEEDRATE (133*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (4*60)
+#define Z_PROBE_FEEDRATE_FAST (8*60)
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
