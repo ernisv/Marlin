@@ -102,8 +102,8 @@
 //
 // Heaters / Fans
 //
-#define HEATER_0_PIN                         145
-#define HEATER_1_PIN                         146
+#define HEATER_0_PIN                         146
+#define HEATER_1_PIN                         145
 #define FAN_PIN                              147
 #define FAN1_PIN                             148
 #define HEATER_BED_PIN                       144
