@@ -925,7 +925,7 @@
   #define DELTA_DIAGONAL_ROD 231.0        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 283.4              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 283.55              // (mm) Get this value from G33 auto calibrate
 
   #define DELTA_ENDSTOP_ADJ { 0.88, 0.00, -1.77 } // Get these values from G33 auto calibrate
 
@@ -1484,7 +1484,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -25, 0, -7.87 }
+#define NOZZLE_TO_PROBE_OFFSET { -16, 0, -7.87 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
