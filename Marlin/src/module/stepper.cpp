@@ -87,6 +87,8 @@ Stepper stepper; // Singleton
   #include "stepper/speed_lookuptable.h"
 #endif
 
+#include <klipper_stepper.h>
+
 #include "endstops.h"
 #include "planner.h"
 #include "motion.h"
