@@ -15,19 +15,19 @@
 
 static uint8_t next_sequence = MESSAGE_DEST;
 
+#if __SIZEOF_POINTER__ > 4 
+#error "Pointer expected to fit into 32 bits"
+#endif
+
 static uint32_t
 command_encode_ptr(void *p)
 {
-    if (sizeof(size_t) > sizeof(uint32_t))
-        return p - console_receive_buffer();
     return (size_t)p;
 }
 
 void *
 command_decode_ptr(uint32_t v)
 {
-    if (sizeof(size_t) > sizeof(uint32_t))
-        return console_receive_buffer() + v;
     return (void*)(size_t)v;
 }
 

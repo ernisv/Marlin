@@ -542,7 +542,7 @@ void GCodeQueue::get_serial_commands() {
       else {
         process_stream_char(serial_char, serial.input_state, serial.line_buffer, serial.count);
 
-        TERN_(KLIPPER_EMULATION, klipper_parser.process_char(serial_char));
+        TERN_(KLIPPER_EMULATION, if (p == KLIPPER_SERIAL_PORT) klipper_parser.process_char(serial_char));
       }
 
     } // NUM_SERIAL loop
