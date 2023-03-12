@@ -617,80 +617,80 @@ ctr_lookup_output(const char *str)
 }
 
 extern void command_allocate_oids(uint32_t*);
-extern void command_buttons_ack(uint32_t*);
-extern void command_buttons_add(uint32_t*);
-extern void command_buttons_query(uint32_t*);
+// extern void command_buttons_ack(uint32_t*);
+// extern void command_buttons_add(uint32_t*);
+// extern void command_buttons_query(uint32_t*);
 extern void command_clear_shutdown(uint32_t*);
-extern void command_config_adxl345(uint32_t*);
-extern void command_config_analog_in(uint32_t*);
-extern void command_config_buttons(uint32_t*);
-extern void command_config_counter(uint32_t*);
-extern void command_config_digital_out(uint32_t*);
-extern void command_config_endstop(uint32_t*);
-extern void command_config_hd44780(uint32_t*);
-extern void command_config_i2c(uint32_t*);
-extern void command_config_mpu9250(uint32_t*);
-extern void command_config_neopixel(uint32_t*);
-extern void command_config_pwm_out(uint32_t*);
-extern void command_config_spi(uint32_t*);
-extern void command_config_spi_angle(uint32_t*);
-extern void command_config_spi_shutdown(uint32_t*);
-extern void command_config_spi_without_cs(uint32_t*);
-extern void command_config_st7920(uint32_t*);
+// extern void command_config_adxl345(uint32_t*);
+// extern void command_config_analog_in(uint32_t*);
+// extern void command_config_buttons(uint32_t*);
+// extern void command_config_counter(uint32_t*);
+// extern void command_config_digital_out(uint32_t*);
+// extern void command_config_endstop(uint32_t*);
+// extern void command_config_hd44780(uint32_t*);
+// extern void command_config_i2c(uint32_t*);
+// extern void command_config_mpu9250(uint32_t*);
+// extern void command_config_neopixel(uint32_t*);
+// extern void command_config_pwm_out(uint32_t*);
+// extern void command_config_spi(uint32_t*);
+// extern void command_config_spi_angle(uint32_t*);
+// extern void command_config_spi_shutdown(uint32_t*);
+// extern void command_config_spi_without_cs(uint32_t*);
+// extern void command_config_st7920(uint32_t*);
 extern void command_config_stepper(uint32_t*);
-extern void command_config_thermocouple(uint32_t*);
-extern void command_config_tmcuart(uint32_t*);
+//extern void command_config_thermocouple(uint32_t*);
+// extern void command_config_tmcuart(uint32_t*);
 extern void command_config_trsync(uint32_t*);
-extern void command_debug_nop(uint32_t*);
-extern void command_debug_ping(uint32_t*);
-extern void command_debug_read(uint32_t*);
-extern void command_debug_write(uint32_t*);
+// extern void command_debug_nop(uint32_t*);
+// extern void command_debug_ping(uint32_t*);
+// extern void command_debug_read(uint32_t*);
+// extern void command_debug_write(uint32_t*);
 extern void command_emergency_stop(uint32_t*);
-extern void command_endstop_home(uint32_t*);
-extern void command_endstop_query_state(uint32_t*);
+// extern void command_endstop_home(uint32_t*);
+// extern void command_endstop_query_state(uint32_t*);
 extern void command_finalize_config(uint32_t*);
 extern void command_get_clock(uint32_t*);
 extern void command_get_config(uint32_t*);
 extern void command_get_uptime(uint32_t*);
-extern void command_hd44780_send_cmds(uint32_t*);
-extern void command_hd44780_send_data(uint32_t*);
-extern void command_i2c_modify_bits(uint32_t*);
-extern void command_i2c_read(uint32_t*);
-extern void command_i2c_write(uint32_t*);
+// extern void command_hd44780_send_cmds(uint32_t*);
+// extern void command_hd44780_send_data(uint32_t*);
+// extern void command_i2c_modify_bits(uint32_t*);
+// extern void command_i2c_read(uint32_t*);
+// extern void command_i2c_write(uint32_t*);
 extern void command_identify(uint32_t*);
-extern void command_neopixel_send(uint32_t*);
-extern void command_neopixel_update(uint32_t*);
-extern void command_query_adxl345(uint32_t*);
-extern void command_query_adxl345_status(uint32_t*);
-extern void command_query_analog_in(uint32_t*);
-extern void command_query_counter(uint32_t*);
-extern void command_query_mpu9250(uint32_t*);
-extern void command_query_mpu9250_status(uint32_t*);
-extern void command_query_spi_angle(uint32_t*);
-extern void command_query_thermocouple(uint32_t*);
-extern void command_queue_digital_out(uint32_t*);
-extern void command_queue_pwm_out(uint32_t*);
+// extern void command_neopixel_send(uint32_t*);
+// extern void command_neopixel_update(uint32_t*);
+// extern void command_query_adxl345(uint32_t*);
+// extern void command_query_adxl345_status(uint32_t*);
+// extern void command_query_analog_in(uint32_t*);
+// extern void command_query_counter(uint32_t*);
+// extern void command_query_mpu9250(uint32_t*);
+// extern void command_query_mpu9250_status(uint32_t*);
+// extern void command_query_spi_angle(uint32_t*);
+// extern void command_query_thermocouple(uint32_t*);
+// extern void command_queue_digital_out(uint32_t*);
+// extern void command_queue_pwm_out(uint32_t*);
 extern void command_queue_step(uint32_t*);
-extern void command_reset(uint32_t*);
+// extern void command_reset(uint32_t*);
 extern void command_reset_step_clock(uint32_t*);
-extern void command_set_digital_out(uint32_t*);
-extern void command_set_digital_out_pwm_cycle(uint32_t*);
+// extern void command_set_digital_out(uint32_t*);
+// extern void command_set_digital_out_pwm_cycle(uint32_t*);
 extern void command_set_next_step_dir(uint32_t*);
-extern void command_set_pwm_out(uint32_t*);
-extern void command_spi_angle_transfer(uint32_t*);
-extern void command_spi_send(uint32_t*);
-extern void command_spi_set_bus(uint32_t*);
-extern void command_spi_set_software_bus(uint32_t*);
-extern void command_spi_transfer(uint32_t*);
-extern void command_st7920_send_cmds(uint32_t*);
-extern void command_st7920_send_data(uint32_t*);
+// extern void command_set_pwm_out(uint32_t*);
+// extern void command_spi_angle_transfer(uint32_t*);
+// extern void command_spi_send(uint32_t*);
+// extern void command_spi_set_bus(uint32_t*);
+// extern void command_spi_set_software_bus(uint32_t*);
+// extern void command_spi_transfer(uint32_t*);
+// extern void command_st7920_send_cmds(uint32_t*);
+// extern void command_st7920_send_data(uint32_t*);
 extern void command_stepper_get_position(uint32_t*);
 extern void command_stepper_stop_on_trigger(uint32_t*);
-extern void command_tmcuart_send(uint32_t*);
+// extern void command_tmcuart_send(uint32_t*);
 extern void command_trsync_set_timeout(uint32_t*);
 extern void command_trsync_start(uint32_t*);
 extern void command_trsync_trigger(uint32_t*);
-extern void command_update_digital_out(uint32_t*);
+// extern void command_update_digital_out(uint32_t*);
 
 const struct command_parser command_index[] PROGMEM = {
 {
@@ -758,78 +758,78 @@ const struct command_parser command_index[] PROGMEM = {
     .num_args=1,
     .flags=0,
     .func=command_allocate_oids
-}, {
-    // debug_nop
-    .msg_id=9,
-    .num_params=0,
-    .param_types = 0,
-    .num_args=0,
-    .flags=0x01,
-    .func=command_debug_nop
-}, {
-    // debug_ping data=%*s
-    .msg_id=10,
-    .num_params=1,
-    .param_types = command_parameters7,
-    .num_args=2,
-    .flags=0x01,
-    .func=command_debug_ping
-}, {
-    // debug_write order=%c addr=%u val=%u
-    .msg_id=11,
-    .num_params=3,
-    .param_types = command_parameters24,
-    .num_args=3,
-    .flags=0x01,
-    .func=command_debug_write
-}, {
-    // debug_read order=%c addr=%u
-    .msg_id=12,
-    .num_params=2,
-    .param_types = command_parameters25,
-    .num_args=2,
-    .flags=0x01,
-    .func=command_debug_read
-}, {
-    // set_digital_out pin=%u value=%c
-    .msg_id=13,
-    .num_params=2,
-    .param_types = command_parameters22,
-    .num_args=2,
-    .flags=0,
-    .func=command_set_digital_out
-}, {
-    // update_digital_out oid=%c value=%c
-    .msg_id=14,
-    .num_params=2,
-    .param_types = command_parameters20,
-    .num_args=2,
-    .flags=0,
-    .func=command_update_digital_out
-}, {
-    // queue_digital_out oid=%c clock=%u on_ticks=%u
-    .msg_id=15,
-    .num_params=3,
-    .param_types = command_parameters24,
-    .num_args=3,
-    .flags=0,
-    .func=command_queue_digital_out
-}, {
-    // set_digital_out_pwm_cycle oid=%c cycle_ticks=%u
-    .msg_id=16,
-    .num_params=2,
-    .param_types = command_parameters25,
-    .num_args=2,
-    .flags=0,
-    .func=command_set_digital_out_pwm_cycle
-}, {
-    // config_digital_out oid=%c pin=%u value=%c default_value=%c max_duration=%u
-    .msg_id=17,
-    .num_params=5,
-    .param_types = command_parameters26,
-    .num_args=5,
-    .flags=0,
-    .func=command_config_digital_out
+// }, {
+//     // debug_nop
+//     .msg_id=9,
+//     .num_params=0,
+//     .param_types = 0,
+//     .num_args=0,
+//     .flags=0x01,
+//     .func=command_debug_nop
+// }, {
+//     // debug_ping data=%*s
+//     .msg_id=10,
+//     .num_params=1,
+//     .param_types = command_parameters7,
+//     .num_args=2,
+//     .flags=0x01,
+//     .func=command_debug_ping
+// }, {
+//     // debug_write order=%c addr=%u val=%u
+//     .msg_id=11,
+//     .num_params=3,
+//     .param_types = command_parameters24,
+//     .num_args=3,
+//     .flags=0x01,
+//     .func=command_debug_write
+// }, {
+//     // debug_read order=%c addr=%u
+//     .msg_id=12,
+//     .num_params=2,
+//     .param_types = command_parameters25,
+//     .num_args=2,
+//     .flags=0x01,
+//     .func=command_debug_read
+// }, {
+//     // set_digital_out pin=%u value=%c
+//     .msg_id=13,
+//     .num_params=2,
+//     .param_types = command_parameters22,
+//     .num_args=2,
+//     .flags=0,
+//     .func=command_set_digital_out
+// }, {
+//     // update_digital_out oid=%c value=%c
+//     .msg_id=14,
+//     .num_params=2,
+//     .param_types = command_parameters20,
+//     .num_args=2,
+//     .flags=0,
+//     .func=command_update_digital_out
+// }, {
+//     // queue_digital_out oid=%c clock=%u on_ticks=%u
+//     .msg_id=15,
+//     .num_params=3,
+//     .param_types = command_parameters24,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_queue_digital_out
+// }, {
+//     // set_digital_out_pwm_cycle oid=%c cycle_ticks=%u
+//     .msg_id=16,
+//     .num_params=2,
+//     .param_types = command_parameters25,
+//     .num_args=2,
+//     .flags=0,
+//     .func=command_set_digital_out_pwm_cycle
+// }, {
+//     // config_digital_out oid=%c pin=%u value=%c default_value=%c max_duration=%u
+//     .msg_id=17,
+//     .num_params=5,
+//     .param_types = command_parameters26,
+//     .num_args=5,
+//     .flags=0,
+//     .func=command_config_digital_out
 }, {
     // stepper_stop_on_trigger oid=%c trsync_oid=%c
     .msg_id=18,
@@ -878,30 +878,30 @@ const struct command_parser command_index[] PROGMEM = {
     .num_args=5,
     .flags=0,
     .func=command_config_stepper
-}, {
-    // endstop_query_state oid=%c
-    .msg_id=24,
-    .num_params=1,
-    .param_types = command_parameters23,
-    .num_args=1,
-    .flags=0,
-    .func=command_endstop_query_state
-}, {
-    // endstop_home oid=%c clock=%u sample_ticks=%u sample_count=%c rest_ticks=%u pin_value=%c trsync_oid=%c trigger_reason=%c
-    .msg_id=25,
-    .num_params=8,
-    .param_types = command_parameters29,
-    .num_args=8,
-    .flags=0,
-    .func=command_endstop_home
-}, {
-    // config_endstop oid=%c pin=%c pull_up=%c
-    .msg_id=26,
-    .num_params=3,
-    .param_types = command_parameters30,
-    .num_args=3,
-    .flags=0,
-    .func=command_config_endstop
+// }, {
+//     // endstop_query_state oid=%c
+//     .msg_id=24,
+//     .num_params=1,
+//     .param_types = command_parameters23,
+//     .num_args=1,
+//     .flags=0,
+//     .func=command_endstop_query_state
+// }, {
+//     // endstop_home oid=%c clock=%u sample_ticks=%u sample_count=%c rest_ticks=%u pin_value=%c trsync_oid=%c trigger_reason=%c
+//     .msg_id=25,
+//     .num_params=8,
+//     .param_types = command_parameters29,
+//     .num_args=8,
+//     .flags=0,
+//     .func=command_endstop_home
+// }, {
+//     // config_endstop oid=%c pin=%c pull_up=%c
+//     .msg_id=26,
+//     .num_params=3,
+//     .param_types = command_parameters30,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_config_endstop
 }, {
     // trsync_trigger oid=%c reason=%c
     .msg_id=27,
@@ -934,366 +934,366 @@ const struct command_parser command_index[] PROGMEM = {
     .num_args=1,
     .flags=0,
     .func=command_config_trsync
-}, {
-    // query_analog_in oid=%c clock=%u sample_ticks=%u sample_count=%c rest_ticks=%u min_value=%hu max_value=%hu range_check_count=%c
-    .msg_id=31,
-    .num_params=8,
-    .param_types = command_parameters31,
-    .num_args=8,
-    .flags=0,
-    .func=command_query_analog_in
-}, {
-    // config_analog_in oid=%c pin=%u
-    .msg_id=32,
-    .num_params=2,
-    .param_types = command_parameters25,
-    .num_args=2,
-    .flags=0,
-    .func=command_config_analog_in
-}, {
-    // config_spi_shutdown oid=%c spi_oid=%c shutdown_msg=%*s
-    .msg_id=33,
-    .num_params=3,
-    .param_types = command_parameters19,
-    .num_args=4,
-    .flags=0,
-    .func=command_config_spi_shutdown
-}, {
-    // spi_send oid=%c data=%*s
-    .msg_id=34,
-    .num_params=2,
-    .param_types = command_parameters12,
-    .num_args=3,
-    .flags=0,
-    .func=command_spi_send
-}, {
-    // spi_transfer oid=%c data=%*s
-    .msg_id=35,
-    .num_params=2,
-    .param_types = command_parameters12,
-    .num_args=3,
-    .flags=0,
-    .func=command_spi_transfer
-}, {
-    // spi_set_bus oid=%c spi_bus=%u mode=%u rate=%u
-    .msg_id=36,
-    .num_params=4,
-    .param_types = command_parameters21,
-    .num_args=4,
-    .flags=0,
-    .func=command_spi_set_bus
-}, {
-    // config_spi_without_cs oid=%c
-    .msg_id=37,
-    .num_params=1,
-    .param_types = command_parameters23,
-    .num_args=1,
-    .flags=0,
-    .func=command_config_spi_without_cs
-}, {
-    // config_spi oid=%c pin=%u cs_active_high=%c
-    .msg_id=38,
-    .num_params=3,
-    .param_types = command_parameters32,
-    .num_args=3,
-    .flags=0,
-    .func=command_config_spi
-}, {
-    // query_thermocouple oid=%c clock=%u rest_ticks=%u min_value=%u max_value=%u max_invalid_count=%c
-    .msg_id=39,
-    .num_params=6,
-    .param_types = command_parameters33,
-    .num_args=6,
-    .flags=0,
-    .func=command_query_thermocouple
-}, {
-    // config_thermocouple oid=%c spi_oid=%c thermocouple_type=%c
-    .msg_id=40,
-    .num_params=3,
-    .param_types = command_parameters30,
-    .num_args=3,
-    .flags=0,
-    .func=command_config_thermocouple
-}, {
-    // i2c_modify_bits oid=%c reg=%*s clear_set_bits=%*s
-    .msg_id=41,
-    .num_params=3,
-    .param_types = command_parameters34,
-    .num_args=5,
-    .flags=0,
-    .func=command_i2c_modify_bits
-}, {
-    // i2c_read oid=%c reg=%*s read_len=%u
-    .msg_id=42,
-    .num_params=3,
-    .param_types = command_parameters35,
-    .num_args=4,
-    .flags=0,
-    .func=command_i2c_read
-}, {
-    // i2c_write oid=%c data=%*s
-    .msg_id=43,
-    .num_params=2,
-    .param_types = command_parameters12,
-    .num_args=3,
-    .flags=0,
-    .func=command_i2c_write
-}, {
-    // config_i2c oid=%c i2c_bus=%u rate=%u address=%u
-    .msg_id=44,
-    .num_params=4,
-    .param_types = command_parameters21,
-    .num_args=4,
-    .flags=0,
-    .func=command_config_i2c
-}, {
-    // set_pwm_out pin=%u cycle_ticks=%u value=%hu
-    .msg_id=45,
-    .num_params=3,
-    .param_types = command_parameters36,
-    .num_args=3,
-    .flags=0,
-    .func=command_set_pwm_out
-}, {
-    // queue_pwm_out oid=%c clock=%u value=%hu
-    .msg_id=46,
-    .num_params=3,
-    .param_types = command_parameters11,
-    .num_args=3,
-    .flags=0,
-    .func=command_queue_pwm_out
-}, {
-    // config_pwm_out oid=%c pin=%u cycle_ticks=%u value=%hu default_value=%hu max_duration=%u
-    .msg_id=47,
-    .num_params=6,
-    .param_types = command_parameters37,
-    .num_args=6,
-    .flags=0,
-    .func=command_config_pwm_out
-}, {
-    // spi_set_software_bus oid=%c miso_pin=%u mosi_pin=%u sclk_pin=%u mode=%u rate=%u
-    .msg_id=48,
-    .num_params=6,
-    .param_types = command_parameters38,
-    .num_args=6,
-    .flags=0,
-    .func=command_spi_set_software_bus
-}, {
-    // query_adxl345_status oid=%c
-    .msg_id=49,
-    .num_params=1,
-    .param_types = command_parameters23,
-    .num_args=1,
-    .flags=0,
-    .func=command_query_adxl345_status
-}, {
-    // query_adxl345 oid=%c clock=%u rest_ticks=%u
-    .msg_id=50,
-    .num_params=3,
-    .param_types = command_parameters24,
-    .num_args=3,
-    .flags=0,
-    .func=command_query_adxl345
-}, {
-    // config_adxl345 oid=%c spi_oid=%c
-    .msg_id=51,
-    .num_params=2,
-    .param_types = command_parameters20,
-    .num_args=2,
-    .flags=0,
-    .func=command_config_adxl345
-}, {
-    // spi_angle_transfer oid=%c data=%*s
-    .msg_id=52,
-    .num_params=2,
-    .param_types = command_parameters12,
-    .num_args=3,
-    .flags=0,
-    .func=command_spi_angle_transfer
-}, {
-    // query_spi_angle oid=%c clock=%u rest_ticks=%u time_shift=%c
-    .msg_id=53,
-    .num_params=4,
-    .param_types = command_parameters13,
-    .num_args=4,
-    .flags=0,
-    .func=command_query_spi_angle
-}, {
-    // config_spi_angle oid=%c spi_oid=%c spi_angle_type=%c
-    .msg_id=54,
-    .num_params=3,
-    .param_types = command_parameters30,
-    .num_args=3,
-    .flags=0,
-    .func=command_config_spi_angle
-}, {
-    // query_mpu9250_status oid=%c
-    .msg_id=55,
-    .num_params=1,
-    .param_types = command_parameters23,
-    .num_args=1,
-    .flags=0,
-    .func=command_query_mpu9250_status
-}, {
-    // query_mpu9250 oid=%c clock=%u rest_ticks=%u
-    .msg_id=56,
-    .num_params=3,
-    .param_types = command_parameters24,
-    .num_args=3,
-    .flags=0,
-    .func=command_query_mpu9250
-}, {
-    // config_mpu9250 oid=%c i2c_oid=%c
-    .msg_id=57,
-    .num_params=2,
-    .param_types = command_parameters20,
-    .num_args=2,
-    .flags=0,
-    .func=command_config_mpu9250
-}, {
-    // st7920_send_data oid=%c data=%*s
-    .msg_id=58,
-    .num_params=2,
-    .param_types = command_parameters12,
-    .num_args=3,
-    .flags=0,
-    .func=command_st7920_send_data
-}, {
-    // st7920_send_cmds oid=%c cmds=%*s
-    .msg_id=59,
-    .num_params=2,
-    .param_types = command_parameters12,
-    .num_args=3,
-    .flags=0,
-    .func=command_st7920_send_cmds
-}, {
-    // config_st7920 oid=%c cs_pin=%u sclk_pin=%u sid_pin=%u sync_delay_ticks=%u cmd_delay_ticks=%u
-    .msg_id=60,
-    .num_params=6,
-    .param_types = command_parameters38,
-    .num_args=6,
-    .flags=0,
-    .func=command_config_st7920
-}, {
-    // hd44780_send_data oid=%c data=%*s
-    .msg_id=61,
-    .num_params=2,
-    .param_types = command_parameters12,
-    .num_args=3,
-    .flags=0,
-    .func=command_hd44780_send_data
-}, {
-    // hd44780_send_cmds oid=%c cmds=%*s
-    .msg_id=62,
-    .num_params=2,
-    .param_types = command_parameters12,
-    .num_args=3,
-    .flags=0,
-    .func=command_hd44780_send_cmds
-}, {
-    // config_hd44780 oid=%c rs_pin=%u e_pin=%u d4_pin=%u d5_pin=%u d6_pin=%u d7_pin=%u delay_ticks=%u
-    .msg_id=63,
-    .num_params=8,
-    .param_types = command_parameters39,
-    .num_args=8,
-    .flags=0,
-    .func=command_config_hd44780
-}, {
-    // buttons_ack oid=%c count=%c
-    .msg_id=64,
-    .num_params=2,
-    .param_types = command_parameters20,
-    .num_args=2,
-    .flags=0,
-    .func=command_buttons_ack
-}, {
-    // buttons_query oid=%c clock=%u rest_ticks=%u retransmit_count=%c invert=%c
-    .msg_id=65,
-    .num_params=5,
-    .param_types = command_parameters40,
-    .num_args=5,
-    .flags=0,
-    .func=command_buttons_query
-}, {
-    // buttons_add oid=%c pos=%c pin=%u pull_up=%c
-    .msg_id=66,
-    .num_params=4,
-    .param_types = command_parameters9,
-    .num_args=4,
-    .flags=0,
-    .func=command_buttons_add
-}, {
-    // config_buttons oid=%c button_count=%c
-    .msg_id=67,
-    .num_params=2,
-    .param_types = command_parameters20,
-    .num_args=2,
-    .flags=0,
-    .func=command_config_buttons
-}, {
-    // tmcuart_send oid=%c write=%*s read=%c
-    .msg_id=68,
-    .num_params=3,
-    .param_types = command_parameters41,
-    .num_args=4,
-    .flags=0,
-    .func=command_tmcuart_send
-}, {
-    // config_tmcuart oid=%c rx_pin=%u pull_up=%c tx_pin=%u bit_time=%u
-    .msg_id=69,
-    .num_params=5,
-    .param_types = command_parameters42,
-    .num_args=5,
-    .flags=0,
-    .func=command_config_tmcuart
-}, {
-    // neopixel_send oid=%c
-    .msg_id=70,
-    .num_params=1,
-    .param_types = command_parameters23,
-    .num_args=1,
-    .flags=0,
-    .func=command_neopixel_send
-}, {
-    // neopixel_update oid=%c pos=%hu data=%*s
-    .msg_id=71,
-    .num_params=3,
-    .param_types = command_parameters15,
-    .num_args=4,
-    .flags=0,
-    .func=command_neopixel_update
-}, {
-    // config_neopixel oid=%c pin=%u data_size=%hu bit_max_ticks=%u reset_min_ticks=%u
-    .msg_id=72,
-    .num_params=5,
-    .param_types = command_parameters43,
-    .num_args=5,
-    .flags=0,
-    .func=command_config_neopixel
-}, {
-    // query_counter oid=%c clock=%u poll_ticks=%u sample_ticks=%u
-    .msg_id=73,
-    .num_params=4,
-    .param_types = command_parameters21,
-    .num_args=4,
-    .flags=0,
-    .func=command_query_counter
-}, {
-    // config_counter oid=%c pin=%u pull_up=%c
-    .msg_id=74,
-    .num_params=3,
-    .param_types = command_parameters32,
-    .num_args=3,
-    .flags=0,
-    .func=command_config_counter
-}, {
-    // reset
-    .msg_id=75,
-    .num_params=0,
-    .param_types = 0,
-    .num_args=0,
-    .flags=0x01,
-    .func=command_reset
+// }, {
+//     // query_analog_in oid=%c clock=%u sample_ticks=%u sample_count=%c rest_ticks=%u min_value=%hu max_value=%hu range_check_count=%c
+//     .msg_id=31,
+//     .num_params=8,
+//     .param_types = command_parameters31,
+//     .num_args=8,
+//     .flags=0,
+//     .func=command_query_analog_in
+// }, {
+//     // config_analog_in oid=%c pin=%u
+//     .msg_id=32,
+//     .num_params=2,
+//     .param_types = command_parameters25,
+//     .num_args=2,
+//     .flags=0,
+//     .func=command_config_analog_in
+// }, {
+//     // config_spi_shutdown oid=%c spi_oid=%c shutdown_msg=%*s
+//     .msg_id=33,
+//     .num_params=3,
+//     .param_types = command_parameters19,
+//     .num_args=4,
+//     .flags=0,
+//     .func=command_config_spi_shutdown
+// }, {
+//     // spi_send oid=%c data=%*s
+//     .msg_id=34,
+//     .num_params=2,
+//     .param_types = command_parameters12,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_spi_send
+// }, {
+//     // spi_transfer oid=%c data=%*s
+//     .msg_id=35,
+//     .num_params=2,
+//     .param_types = command_parameters12,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_spi_transfer
+// }, {
+//     // spi_set_bus oid=%c spi_bus=%u mode=%u rate=%u
+//     .msg_id=36,
+//     .num_params=4,
+//     .param_types = command_parameters21,
+//     .num_args=4,
+//     .flags=0,
+//     .func=command_spi_set_bus
+// }, {
+//     // config_spi_without_cs oid=%c
+//     .msg_id=37,
+//     .num_params=1,
+//     .param_types = command_parameters23,
+//     .num_args=1,
+//     .flags=0,
+//     .func=command_config_spi_without_cs
+// }, {
+//     // config_spi oid=%c pin=%u cs_active_high=%c
+//     .msg_id=38,
+//     .num_params=3,
+//     .param_types = command_parameters32,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_config_spi
+// }, {
+//     // query_thermocouple oid=%c clock=%u rest_ticks=%u min_value=%u max_value=%u max_invalid_count=%c
+//     .msg_id=39,
+//     .num_params=6,
+//     .param_types = command_parameters33,
+//     .num_args=6,
+//     .flags=0,
+//     .func=command_query_thermocouple
+// }, {
+//     // config_thermocouple oid=%c spi_oid=%c thermocouple_type=%c
+//     .msg_id=40,
+//     .num_params=3,
+//     .param_types = command_parameters30,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_config_thermocouple
+// }, {
+//     // i2c_modify_bits oid=%c reg=%*s clear_set_bits=%*s
+//     .msg_id=41,
+//     .num_params=3,
+//     .param_types = command_parameters34,
+//     .num_args=5,
+//     .flags=0,
+//     .func=command_i2c_modify_bits
+// }, {
+//     // i2c_read oid=%c reg=%*s read_len=%u
+//     .msg_id=42,
+//     .num_params=3,
+//     .param_types = command_parameters35,
+//     .num_args=4,
+//     .flags=0,
+//     .func=command_i2c_read
+// }, {
+//     // i2c_write oid=%c data=%*s
+//     .msg_id=43,
+//     .num_params=2,
+//     .param_types = command_parameters12,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_i2c_write
+// }, {
+//     // config_i2c oid=%c i2c_bus=%u rate=%u address=%u
+//     .msg_id=44,
+//     .num_params=4,
+//     .param_types = command_parameters21,
+//     .num_args=4,
+//     .flags=0,
+//     .func=command_config_i2c
+// }, {
+//     // set_pwm_out pin=%u cycle_ticks=%u value=%hu
+//     .msg_id=45,
+//     .num_params=3,
+//     .param_types = command_parameters36,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_set_pwm_out
+// }, {
+//     // queue_pwm_out oid=%c clock=%u value=%hu
+//     .msg_id=46,
+//     .num_params=3,
+//     .param_types = command_parameters11,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_queue_pwm_out
+// }, {
+//     // config_pwm_out oid=%c pin=%u cycle_ticks=%u value=%hu default_value=%hu max_duration=%u
+//     .msg_id=47,
+//     .num_params=6,
+//     .param_types = command_parameters37,
+//     .num_args=6,
+//     .flags=0,
+//     .func=command_config_pwm_out
+// }, {
+//     // spi_set_software_bus oid=%c miso_pin=%u mosi_pin=%u sclk_pin=%u mode=%u rate=%u
+//     .msg_id=48,
+//     .num_params=6,
+//     .param_types = command_parameters38,
+//     .num_args=6,
+//     .flags=0,
+//     .func=command_spi_set_software_bus
+// }, {
+//     // query_adxl345_status oid=%c
+//     .msg_id=49,
+//     .num_params=1,
+//     .param_types = command_parameters23,
+//     .num_args=1,
+//     .flags=0,
+//     .func=command_query_adxl345_status
+// }, {
+//     // query_adxl345 oid=%c clock=%u rest_ticks=%u
+//     .msg_id=50,
+//     .num_params=3,
+//     .param_types = command_parameters24,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_query_adxl345
+// }, {
+//     // config_adxl345 oid=%c spi_oid=%c
+//     .msg_id=51,
+//     .num_params=2,
+//     .param_types = command_parameters20,
+//     .num_args=2,
+//     .flags=0,
+//     .func=command_config_adxl345
+// }, {
+//     // spi_angle_transfer oid=%c data=%*s
+//     .msg_id=52,
+//     .num_params=2,
+//     .param_types = command_parameters12,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_spi_angle_transfer
+// }, {
+//     // query_spi_angle oid=%c clock=%u rest_ticks=%u time_shift=%c
+//     .msg_id=53,
+//     .num_params=4,
+//     .param_types = command_parameters13,
+//     .num_args=4,
+//     .flags=0,
+//     .func=command_query_spi_angle
+// }, {
+//     // config_spi_angle oid=%c spi_oid=%c spi_angle_type=%c
+//     .msg_id=54,
+//     .num_params=3,
+//     .param_types = command_parameters30,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_config_spi_angle
+// }, {
+//     // query_mpu9250_status oid=%c
+//     .msg_id=55,
+//     .num_params=1,
+//     .param_types = command_parameters23,
+//     .num_args=1,
+//     .flags=0,
+//     .func=command_query_mpu9250_status
+// }, {
+//     // query_mpu9250 oid=%c clock=%u rest_ticks=%u
+//     .msg_id=56,
+//     .num_params=3,
+//     .param_types = command_parameters24,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_query_mpu9250
+// }, {
+//     // config_mpu9250 oid=%c i2c_oid=%c
+//     .msg_id=57,
+//     .num_params=2,
+//     .param_types = command_parameters20,
+//     .num_args=2,
+//     .flags=0,
+//     .func=command_config_mpu9250
+// }, {
+//     // st7920_send_data oid=%c data=%*s
+//     .msg_id=58,
+//     .num_params=2,
+//     .param_types = command_parameters12,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_st7920_send_data
+// }, {
+//     // st7920_send_cmds oid=%c cmds=%*s
+//     .msg_id=59,
+//     .num_params=2,
+//     .param_types = command_parameters12,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_st7920_send_cmds
+// }, {
+//     // config_st7920 oid=%c cs_pin=%u sclk_pin=%u sid_pin=%u sync_delay_ticks=%u cmd_delay_ticks=%u
+//     .msg_id=60,
+//     .num_params=6,
+//     .param_types = command_parameters38,
+//     .num_args=6,
+//     .flags=0,
+//     .func=command_config_st7920
+// }, {
+//     // hd44780_send_data oid=%c data=%*s
+//     .msg_id=61,
+//     .num_params=2,
+//     .param_types = command_parameters12,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_hd44780_send_data
+// }, {
+//     // hd44780_send_cmds oid=%c cmds=%*s
+//     .msg_id=62,
+//     .num_params=2,
+//     .param_types = command_parameters12,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_hd44780_send_cmds
+// }, {
+//     // config_hd44780 oid=%c rs_pin=%u e_pin=%u d4_pin=%u d5_pin=%u d6_pin=%u d7_pin=%u delay_ticks=%u
+//     .msg_id=63,
+//     .num_params=8,
+//     .param_types = command_parameters39,
+//     .num_args=8,
+//     .flags=0,
+//     .func=command_config_hd44780
+// }, {
+//     // buttons_ack oid=%c count=%c
+//     .msg_id=64,
+//     .num_params=2,
+//     .param_types = command_parameters20,
+//     .num_args=2,
+//     .flags=0,
+//     .func=command_buttons_ack
+// }, {
+//     // buttons_query oid=%c clock=%u rest_ticks=%u retransmit_count=%c invert=%c
+//     .msg_id=65,
+//     .num_params=5,
+//     .param_types = command_parameters40,
+//     .num_args=5,
+//     .flags=0,
+//     .func=command_buttons_query
+// }, {
+//     // buttons_add oid=%c pos=%c pin=%u pull_up=%c
+//     .msg_id=66,
+//     .num_params=4,
+//     .param_types = command_parameters9,
+//     .num_args=4,
+//     .flags=0,
+//     .func=command_buttons_add
+// }, {
+//     // config_buttons oid=%c button_count=%c
+//     .msg_id=67,
+//     .num_params=2,
+//     .param_types = command_parameters20,
+//     .num_args=2,
+//     .flags=0,
+//     .func=command_config_buttons
+// }, {
+//     // tmcuart_send oid=%c write=%*s read=%c
+//     .msg_id=68,
+//     .num_params=3,
+//     .param_types = command_parameters41,
+//     .num_args=4,
+//     .flags=0,
+//     .func=command_tmcuart_send
+// }, {
+//     // config_tmcuart oid=%c rx_pin=%u pull_up=%c tx_pin=%u bit_time=%u
+//     .msg_id=69,
+//     .num_params=5,
+//     .param_types = command_parameters42,
+//     .num_args=5,
+//     .flags=0,
+//     .func=command_config_tmcuart
+// }, {
+//     // neopixel_send oid=%c
+//     .msg_id=70,
+//     .num_params=1,
+//     .param_types = command_parameters23,
+//     .num_args=1,
+//     .flags=0,
+//     .func=command_neopixel_send
+// }, {
+//     // neopixel_update oid=%c pos=%hu data=%*s
+//     .msg_id=71,
+//     .num_params=3,
+//     .param_types = command_parameters15,
+//     .num_args=4,
+//     .flags=0,
+//     .func=command_neopixel_update
+// }, {
+//     // config_neopixel oid=%c pin=%u data_size=%hu bit_max_ticks=%u reset_min_ticks=%u
+//     .msg_id=72,
+//     .num_params=5,
+//     .param_types = command_parameters43,
+//     .num_args=5,
+//     .flags=0,
+//     .func=command_config_neopixel
+// }, {
+//     // query_counter oid=%c clock=%u poll_ticks=%u sample_ticks=%u
+//     .msg_id=73,
+//     .num_params=4,
+//     .param_types = command_parameters21,
+//     .num_args=4,
+//     .flags=0,
+//     .func=command_query_counter
+// }, {
+//     // config_counter oid=%c pin=%u pull_up=%c
+//     .msg_id=74,
+//     .num_params=3,
+//     .param_types = command_parameters32,
+//     .num_args=3,
+//     .flags=0,
+//     .func=command_config_counter
+// }, {
+//     // reset
+//     .msg_id=75,
+//     .num_params=0,
+//     .param_types = 0,
+//     .num_args=0,
+//     .flags=0x01,
+//     .func=command_reset
 },
 };
 
