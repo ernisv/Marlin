@@ -28,6 +28,10 @@
 
 #include "../inc/MarlinConfig.h"
 
+#if ENABLED(KLIPPER_EMULATION)
+#include <integration/klipper_cmd_parser.h>
+#endif
+
 class GCodeQueue {
 public:
   /**
@@ -247,6 +251,10 @@ public:
   #endif // BUFFER_MONITORING
 
 private:
+
+  #if ENABLED(KLIPPER_EMULATION)
+  static KlipperCmdParser klipper_parser;
+  #endif
 
   static void get_serial_commands();
 

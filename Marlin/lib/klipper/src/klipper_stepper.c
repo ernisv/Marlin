@@ -60,6 +60,12 @@ enum {
     SF_SINGLE_SCHED=1<<4, SF_HAVE_ADD=1<<5
 };
 
+static uint8_t _was_stepper_activated = 0;
+
+uint8_t klipper_stepper_active() {
+    return _was_stepper_activated;
+}
+
 // Setup a stepper for the next move in its queue
 static uint_fast8_t
 stepper_load_next(struct stepper *s)
@@ -184,6 +190,9 @@ stepper_event(struct timer *t)
 void
 command_config_stepper(uint32_t *args)
 {
+    // mark that Klipper started working with steppers
+    _was_stepper_activated = 1;
+
     struct stepper *s = oid_alloc(args[0], command_config_stepper, sizeof(*s));
     int_fast8_t invert_step = args[3];
     s->flags = invert_step > 0 ? SF_INVERT_STEP : 0;

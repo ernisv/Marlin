@@ -34,6 +34,10 @@
 #include <freertos/queue.h>
 #include "../../module/stepper.h"
 
+#if ENABLED(KLIPPER_EMULATION)
+  #include "../../module/klipper/klipper_timers.h"
+#endif
+
 #define DMA_BUF_COUNT 8                                // number of DMA buffers to store data
 #define DMA_BUF_LEN   4092                             // maximum size in bytes
 #define I2S_SAMPLE_SIZE 4                              // 4 bytes, 32 bits per sample
@@ -149,6 +153,9 @@ void stepperTask(void *parameter) {
     dma.rw_pos = 0;
 
     while (dma.rw_pos < DMA_SAMPLE_COUNT) {
+
+      TERN_(KLIPPER_EMULATION, klipper_timer_periodic_tick());
+
       // Fill with the port data post pulse_phase until the next step
       if (nextMainISR && TERN1(LIN_ADVANCE, nextAdvanceISR))
         i2s_push_sample();

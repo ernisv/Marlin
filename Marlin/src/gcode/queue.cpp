@@ -63,6 +63,8 @@ PGMSTR(G28_STR, "G28");
 GCodeQueue::SerialState GCodeQueue::serial_state[NUM_SERIAL] = { 0 };
 GCodeQueue::RingBuffer GCodeQueue::ring_buffer = { 0 };
 
+TERN_(KLIPPER_EMULATION, KlipperCmdParser GCodeQueue::klipper_parser);
+
 #if NO_TIMEOUTS > 0
   static millis_t last_command_time = 0;
 #endif
@@ -537,8 +539,11 @@ void GCodeQueue::get_serial_commands() {
         // Add the command to the queue
         ring_buffer.enqueue(serial.line_buffer, false OPTARG(HAS_MULTI_SERIAL, p));
       }
-      else
+      else {
         process_stream_char(serial_char, serial.input_state, serial.line_buffer, serial.count);
+
+        TERN_(KLIPPER_EMULATION, klipper_parser.process_char(serial_char));
+      }
 
     } // NUM_SERIAL loop
   } // queue has space, serial has data

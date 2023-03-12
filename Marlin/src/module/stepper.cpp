@@ -87,8 +87,6 @@ Stepper stepper; // Singleton
   #include "stepper/speed_lookuptable.h"
 #endif
 
-#include <klipper_stepper.h>
-
 #include "endstops.h"
 #include "planner.h"
 #include "motion.h"
@@ -98,6 +96,15 @@ Stepper stepper; // Singleton
 #include "../sd/cardreader.h"
 #include "../MarlinCore.h"
 #include "../HAL/shared/Delay.h"
+
+#if ENABLED(KLIPPER_EMULATION)
+  #include "klipper/klipper_timers.h"
+  extern "C" {
+    #include <sched.h>
+    #include <klipper_stepper.h>
+  }
+#endif
+
 
 #if ENABLED(BD_SENSOR)
   #include "../feature/bedlevel/bdl/bdl.h"
@@ -1451,7 +1458,18 @@ void Stepper::set_directions() {
 HAL_STEP_TIMER_ISR() {
   HAL_timer_isr_prologue(MF_TIMER_STEP);
 
-  Stepper::isr();
+  #if ENABLED(KLIPPER_EMULATION)
+    if (klipper_stepper_active()) {
+      hal_timer_t next_wake_time = (hal_timer_t)sched_timer_dispatch();
+
+      HAL_timer_set_compare(MF_TIMER_STEP, next_wake_time);
+    } else {
+      Stepper::isr();
+    }
+
+  #else
+    Stepper::isr();
+  #endif
 
   HAL_timer_isr_epilogue(MF_TIMER_STEP);
 }
