@@ -12,7 +12,7 @@
 #include "board/misc.h" // timer_from_us
 #include "board/pgm.h" // READP
 #include "command.h" // shutdown
-#include "sched.h" // sched_check_periodic
+#include "klipper_sched.h" // sched_check_periodic
 #include "klipper_stepper.h" // stepper_event
 
 static struct timer periodic_timer, sentinel_timer, deleted_timer;
@@ -338,19 +338,19 @@ sched_shutdown(uint_fast8_t reason)
  ****************************************************************/
 
 // Main loop of program
-void
-sched_main(void)
-{
-    extern void ctr_run_initfuncs(void);
-    ctr_run_initfuncs();
+// void
+// sched_main(void)
+// {
+//     extern void ctr_run_initfuncs(void);
+//     ctr_run_initfuncs();
 
-    sendf("starting");
+//     sendf("starting");
 
-    irq_disable();
-    int ret = setjmp(shutdown_jmp);
-    if (ret)
-        run_shutdown(ret);
-    irq_enable();
+//     irq_disable();
+//     int ret = setjmp(shutdown_jmp);
+//     if (ret)
+//         run_shutdown(ret);
+//     irq_enable();
 
-    run_tasks();
-}
+//     run_tasks();
+// }

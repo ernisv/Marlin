@@ -10,7 +10,7 @@ extern "C" {
         uint_fast8_t msglen = command_encode_and_frame(klipper_response_buf, ce, args);
 
         PORT_REDIRECT(SERIAL_PORTMASK(KLIPPER_SERIAL_PORT));
-        
+
         for (uint8_t *out = klipper_response_buf; out - klipper_response_buf < msglen; ++out) {
             SERIAL_CHAR(*out);
         }

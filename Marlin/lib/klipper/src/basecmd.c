@@ -10,7 +10,7 @@
 #include "board/misc.h"
 #include "board/pgm.h" // READP
 #include "command.h" // DECL_COMMAND
-#include "sched.h" // sched_clear_shutdown
+#include "klipper_sched.h" // sched_clear_shutdown
 
 
 /****************************************************************

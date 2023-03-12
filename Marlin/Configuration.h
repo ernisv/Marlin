@@ -87,7 +87,8 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_MKS_TINYBEE
+  #define MOTHERBOARD BOARD_LINUX_RAMPS
+  //BOARD_MKS_SGEN_L_V2
 #endif
 
 /**

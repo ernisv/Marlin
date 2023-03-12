@@ -9,7 +9,7 @@
 #include "board/pgm.h" // READP
 #include "ctr.h" // DECL_CTR
 #include "initial_pins.h" // initial_pins
-#include "sched.h" // DECL_INIT
+#include "klipper_sched.h" // DECL_INIT
 
 DECL_CTR("DECL_INITIAL_PINS " __stringify(CONFIG_INITIAL_PINS));
 

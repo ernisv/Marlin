@@ -100,7 +100,7 @@ Stepper stepper; // Singleton
 #if ENABLED(KLIPPER_EMULATION)
   #include "klipper/klipper_timers.h"
   extern "C" {
-    #include <sched.h>
+    #include <klipper_sched.h>
     #include <klipper_stepper.h>
   }
 #endif

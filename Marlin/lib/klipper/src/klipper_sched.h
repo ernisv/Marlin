@@ -39,7 +39,7 @@ void sched_clear_shutdown(void);
 void sched_try_shutdown(uint_fast8_t reason);
 void sched_shutdown(uint_fast8_t reason) __noreturn;
 void sched_report_shutdown(void);
-void sched_main(void);
+// void sched_main(void);
 
 // Compiler glue for DECL_X macros above.
 #define _DECL_CALLLIST(NAME, FUNC)                                      \

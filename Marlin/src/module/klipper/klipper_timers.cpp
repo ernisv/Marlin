@@ -5,7 +5,7 @@
 */
 
 extern "C" {
-    #include <sched.h>
+    #include <klipper_sched.h>
 
     uint32_t timer_from_us(uint32_t us) {
         return us * STEPPER_TIMER_RATE / 1000000;
