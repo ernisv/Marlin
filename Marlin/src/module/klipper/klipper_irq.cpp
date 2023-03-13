@@ -7,6 +7,10 @@
 extern "C" {
 #include <board/irq.h>
 
+#if __SIZEOF_POINTER__ > 4
+#include <unistd.h>
+#endif
+
 
 irqstatus_t irq_save(void) {
     irqstatus_t ret = hal.isr_state();
@@ -31,11 +35,11 @@ void irq_enable(void) {
 void irq_wait(void) {
     hal.isr_on();
     asm volatile ("nop");
+    #if __SIZEOF_POINTER__ > 4
+    usleep(1);
+    #endif
     hal.isr_off();
 }
 
 void irq_poll(void) { }
-
-
-
 }
