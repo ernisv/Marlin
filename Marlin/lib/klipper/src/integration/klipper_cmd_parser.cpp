@@ -2,6 +2,8 @@
 
 extern "C" {
 #include "../command.h"
+
+extern uint8_t next_sequence = MESSAGE_DEST;
 }
 
 void KlipperCmdParser::process_char(const char c) {
@@ -41,6 +43,7 @@ bool KlipperCmdParser::is_last_byte(char c) {
 }
 
 void KlipperCmdParser::block_completed() {
+    next_sequence = ((msg_block_buf[1] + 1) & MESSAGE_SEQ_MASK) | MESSAGE_DEST;
     ::command_dispatch(msg_block_buf, content_ind);
     ::command_send_ack();
 }
