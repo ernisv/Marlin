@@ -4,7 +4,7 @@ extern "C" {
     #include <board/misc.h>
     #include <command.h>
 
-    static uint8_t klipper_response_buf[256];
+    static uint8_t klipper_response_buf[65];
 
     void console_sendf(const struct command_encoder *ce, va_list args) {
         uint_fast8_t msglen = command_encode_and_frame(klipper_response_buf, ce, args);

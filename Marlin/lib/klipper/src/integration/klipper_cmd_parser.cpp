@@ -41,5 +41,6 @@ bool KlipperCmdParser::is_last_byte(char c) {
 }
 
 void KlipperCmdParser::block_completed() {
-    ::command_dispatch((uint8_t*)msg_block_buf, content_ind);                
+    ::command_dispatch(msg_block_buf, content_ind);
+    ::command_send_ack();
 }

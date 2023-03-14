@@ -1,10 +1,12 @@
 #pragma once
 
+#include <stdint.h>
+
 #define MSG_BLOCK_BUFFER_SIZE 255
 
 class KlipperCmdParser {
     private:
-        char msg_block_buf[MSG_BLOCK_BUFFER_SIZE];
+        uint8_t msg_block_buf[MSG_BLOCK_BUFFER_SIZE];
         int content_ind = 0;
 
         static inline bool maybe_first_byte(char c);

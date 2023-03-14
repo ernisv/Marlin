@@ -50,13 +50,11 @@ void write_serial_thread() {
 }
 
 void read_serial_thread() {
-  char buffer[3] = {};
   for (;;) {
-    std::size_t len = _MIN(usb_serial.receive_buffer.free(), 2U);
-    if (fgets(buffer, len, stdin))
-      for (std::size_t i = 0; i < strlen(buffer); i++)
-        usb_serial.receive_buffer.write(buffer[i]);
-    std::this_thread::yield();
+    char ch = getchar();
+    if (ch < 0) break;
+    usb_serial.receive_buffer.write(ch);
+//    std::this_thread::yield();
   }
 }
 
