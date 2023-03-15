@@ -3,8 +3,10 @@
 extern "C" {
 #include "../command.h"
 
-extern uint8_t next_sequence = MESSAGE_DEST;
 }
+
+
+#include <stdio.h>
 
 void KlipperCmdParser::process_char(const char c) {
     if (content_ind == 0 && maybe_first_byte(c)) {
@@ -16,7 +18,7 @@ void KlipperCmdParser::process_char(const char c) {
             // if it's not second byte, it still may be first byte
             msg_block_buf[0] = c;
         } else content_ind = 0;
-    } else {
+    } else if (content_ind > 1) {
         // already reading contents
         msg_block_buf[content_ind++] = c;
         if ((int)msg_block_buf[0] == content_ind) {
@@ -31,19 +33,19 @@ void KlipperCmdParser::process_char(const char c) {
 }
 
 bool KlipperCmdParser::maybe_first_byte(char c) {
-    return c >= 5;
+    return c >= MESSAGE_MIN && c <= MESSAGE_MAX;
 }
 
 bool KlipperCmdParser::maybe_second_byte(char c) {
-    return (c & 0xF0) == 0x10;
+    return (c & ~MESSAGE_SEQ_MASK) == 0x10;
 }
 
 bool KlipperCmdParser::is_last_byte(char c) {
-    return c == 0x7e;
+    return c == MESSAGE_SYNC;
 }
 
 void KlipperCmdParser::block_completed() {
-    next_sequence = ((msg_block_buf[1] + 1) & MESSAGE_SEQ_MASK) | MESSAGE_DEST;
-    ::command_dispatch(msg_block_buf, content_ind);
-    ::command_send_ack();
+    update_next_sequence(((msg_block_buf[1] + 1) & MESSAGE_SEQ_MASK) | MESSAGE_DEST);
+    command_dispatch(msg_block_buf, content_ind);
+    command_send_ack();
 }

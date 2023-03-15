@@ -83,6 +83,7 @@ void command_dispatch(uint8_t *buf, uint_fast8_t msglen);
 void command_send_ack(void);
 int_fast8_t command_find_and_dispatch(uint8_t *buf, uint_fast8_t buf_len
                                       , uint_fast8_t *pop_count);
+void update_next_sequence(uint8_t next_sequence);
 
 // out/compile_time_request.c (auto generated file)
 extern const struct command_parser command_index[];

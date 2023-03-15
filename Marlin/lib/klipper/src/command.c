@@ -15,6 +15,14 @@
 
 static uint8_t next_sequence = MESSAGE_DEST;
 
+void update_next_sequence(uint8_t _next_sequence) {
+    next_sequence = _next_sequence;
+}
+
+uint8_t get_next_sequence() {
+    return next_sequence;
+}
+
 static uint32_t
 command_encode_ptr(void *p)
 {

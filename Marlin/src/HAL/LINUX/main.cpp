@@ -36,6 +36,8 @@
 #include <iostream>
 #include <fstream>
 
+using namespace std::chrono_literals;
+
 extern void setup();
 extern void loop();
 
@@ -43,18 +45,21 @@ extern void loop();
 void write_serial_thread() {
   for (;;) {
     for (std::size_t i = usb_serial.transmit_buffer.available(); i > 0; i--) {
-      fputc(usb_serial.transmit_buffer.read(), stdout);
+      putchar(usb_serial.transmit_buffer.read());
     }
+    fflush(stdout);
     std::this_thread::yield();
   }
 }
 
 void read_serial_thread() {
   for (;;) {
-    char ch = getchar();
-    if (ch < 0) break;
+    int ch = getc(stdin);
+    if (ch < 0) {
+      std::this_thread::yield();
+      continue;
+    }    
     usb_serial.receive_buffer.write(ch);
-//    std::this_thread::yield();
   }
 }
 
@@ -126,6 +131,7 @@ int main() {
   for (;;) {
     loop();
     std::this_thread::yield();
+    std::this_thread::sleep_for(1ms);
   }
 
   simulation.join();

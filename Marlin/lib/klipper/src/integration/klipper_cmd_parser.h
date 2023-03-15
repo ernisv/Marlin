@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 
-#define MSG_BLOCK_BUFFER_SIZE 255
+#define MSG_BLOCK_BUFFER_SIZE 65
 
 class KlipperCmdParser {
     private:
