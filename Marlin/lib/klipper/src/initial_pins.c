@@ -4,12 +4,13 @@
 //
 // This file may be distributed under the terms of the GNU GPLv3 license.
 
-#include "autoconf.h" // CONFIG_INITIAL_PINS
 #include "board/gpio.h" // gpio_out_setup
 #include "board/pgm.h" // READP
 #include "ctr.h" // DECL_CTR
 #include "initial_pins.h" // initial_pins
 #include "klipper_sched.h" // DECL_INIT
+
+#define CONFIG_INITIAL_PINS ""
 
 DECL_CTR("DECL_INITIAL_PINS " __stringify(CONFIG_INITIAL_PINS));
 
