@@ -14,7 +14,9 @@ OBJCOPY=objcopy
 $(OUT)%.o.ctr: $(OUT)%.o
 	$(OBJCOPY) -j '.compile_time_request' -O binary $^ $@
 
-OBJ_FILES=$(wildcard $(OUT)klipper/*.o)
+OBJ_FILES=$(wildcard $(OUT)klipper/*.o)\
+ $(wildcard $(OUT)klipper/board/*.o)\
+ $(wildcard $(OUT)klipper/integration/*.o)
 CTR_FILES=$(patsubst %.o,%.o.ctr,${OBJ_FILES})
 
 $(SRC_OUT)compile_time_request.c: ${CTR_FILES} buildcommands.py

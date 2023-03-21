@@ -1046,6 +1046,14 @@ inline void tmc_standby_setup() {
   #endif
 }
 
+#if ENABLED(KLIPPER_EMULATION)
+  extern "C" {
+    extern void ctr_run_taskfuncs(void);
+    extern void ctr_run_initfuncs(void);
+  }
+#endif
+
+
 /**
  * Marlin Firmware entry-point. Abandon Hope All Ye Who Enter Here.
  * Setup before the program loop:
@@ -1645,6 +1653,8 @@ void setup() {
 
   marlin_state = MF_RUNNING;
 
+  TERN_(KLIPPER_EMULATION, ctr_run_initfuncs());
+
   SETUP_LOG("setup() completed.");
 
   TERN_(MARLIN_TEST_BUILD, runStartupTests());
@@ -1683,6 +1693,8 @@ void loop() {
     TERN_(HAS_TFT_LVGL_UI, printer_state_polling());
 
     TERN_(MARLIN_TEST_BUILD, runPeriodicTests());
+
+    TERN_(KLIPPER_EMULATION, ctr_run_taskfuncs());
 
   } while (ENABLED(__AVR__)); // Loop forever on slower (AVR) boards
 }
