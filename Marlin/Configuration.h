@@ -925,20 +925,20 @@
   #define DELTA_DIAGONAL_ROD 231.0        // (mm)
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 279.20              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 280.59              // (mm) Get this value from G33 auto calibrate
 
-  #define DELTA_ENDSTOP_ADJ { -0.79, 0.0, -1.16 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { -0.04, 0.0, -1.58 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 113.58              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 113.65              // (mm) Get this value from G33 auto calibrate
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { -0.11, 0.37, -0.26 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { -0.03, 0.24, -0.21 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
-  #define DELTA_RADIUS_TRIM_TOWER { -0.22, 0.17, 0.04 }
+  #define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
 //  #define DELTA_DIAGONAL_ROD_TRIM_TOWER { 0.0, 0.0, 0.0 }
 #endif
 
@@ -1484,7 +1484,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 16, 0, -10.08 }
+#define NOZZLE_TO_PROBE_OFFSET { 16, 0, -10.25 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
