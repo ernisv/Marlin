@@ -619,8 +619,6 @@
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
 #endif
 
-#endif
-
 /**
  * Model Predictive Control for hotend
  *
