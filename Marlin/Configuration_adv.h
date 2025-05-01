@@ -958,6 +958,9 @@
    */
   //#define BLTOUCH_HS_MODE
 
+  // Safety: Enable voltage mode settings in the LCD menu.
+  //#define BLTOUCH_LCD_VOLTAGE_MENU
+
 #endif // BLTOUCH
 
 // @section calibration
@@ -1086,6 +1089,7 @@
   #if ENABLED(INPUT_SHAPING_X)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     #define SHAPING_FREQ_X  40.0        // (Hz) The default dominant resonant frequency on the X axis.
     #define SHAPING_ZETA_X   0.15       // Damping ratio of the X axis (range: 0.0 = no damping to 1.0 = critical damping).
   #endif
@@ -1116,6 +1120,17 @@
   #define SHAPING_MIN_FREQ  20        // By default the minimum of the shaping frequencies. Override to affect SRAM usage.
   #define SHAPING_MAX_STEPRATE 10000  // By default the maximum total step rate of the shaped axes. Override to affect SRAM usage.
 >>>>>>> b84aa451fa (Enable Junction deviation)
+=======
+    #define SHAPING_FREQ_X  57          // (Hz) The default dominant resonant frequency on the X axis.
+    #define SHAPING_ZETA_X  0.35f       // Damping ratio of the X axis (range: 0.0 = no damping to 1.0 = critical damping).
+  #endif
+  #if ENABLED(INPUT_SHAPING_Y)
+    #define SHAPING_FREQ_Y  40          // (Hz) The default dominant resonant frequency on the Y axis.
+    #define SHAPING_ZETA_Y  0.20f       // Damping ratio of the Y axis (range: 0.0 = no damping to 1.0 = critical damping).
+  #endif
+  #define SHAPING_MIN_FREQ  20        // By default the minimum of the shaping frequencies. Override to affect SRAM usage.
+  #define SHAPING_MAX_STEPRATE 10000  // By default the maximum total step rate of the shaped axes. Override to affect SRAM usage.
+>>>>>>> e208bbe5046073d68528e1f693da6957d8cc5ac2
   #define SHAPING_MENU                // Add a menu to the LCD to set shaping parameters.
 #endif
 
@@ -3475,9 +3490,15 @@
       /**
      * Enable M3 commands for laser mode inline power planner syncing.
      * This feature enables any M3 S-value to be injected into the block buffers while in
+<<<<<<< HEAD
      * CUTTER_MODE_CONTINUOUS. The option allows M3 laser power to be committed without waiting
      * for a planner synchronization
      */
+=======
+     * CUTTER_MODE_CONTINUOUS. The option allows M3 laser power to be commited without waiting
+     * for a planner syncronization
+       */
+>>>>>>> e208bbe5046073d68528e1f693da6957d8cc5ac2
     //#define LASER_POWER_SYNC
 
       /**
